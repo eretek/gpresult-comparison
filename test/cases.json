@@ -1,0 +1,30 @@
+{
+ "tests": [
+  {
+   "in": {
+    "a": "<Rsop><ComputerResults><GPO><Name>A</Name><Path><Identifier>{1}</Identifier></Path></GPO></ComputerResults></Rsop>",
+    "b": "<Rsop><ComputerResults><GPO><Name>B</Name><Path><Identifier>{1}</Identifier></Path></GPO></ComputerResults></Rsop>"
+   },
+   "v": {
+    "name": 1,
+    "same": 0
+   }
+  },
+  {
+   "in": {
+    "a": "<Rsop><ComputerResults><GPO><Name>A</Name><Path><Identifier>{1}</Identifier></Path><FilterAllowed>true</FilterAllowed></GPO></ComputerResults></Rsop>",
+    "b": "<Rsop><ComputerResults><GPO><Name>A</Name><Path><Identifier>{1}</Identifier></Path><FilterAllowed>false</FilterAllowed></GPO></ComputerResults></Rsop>"
+   },
+   "v": {
+    "state": 1
+   }
+  },
+  {
+   "in": {
+    "a": "<Rsop/>",
+    "b": "<Rsop/>"
+   },
+   "err": "a"
+  }
+ ]
+}
